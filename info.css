@@ -1,0 +1,185 @@
+/* =============================================
+   SANTYMINII — info.css
+   ============================================= */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: 'Eordeoghlakat';
+  src: url('Eordeoghlakat.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'LDSlender';
+  src: url('ldslender.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'LDSlender', sans-serif;
+  min-height: 100vh;
+  color: #ffffff;
+  position: relative;
+  overflow-x: hidden;
+}
+
+a { text-decoration: none; color: inherit; }
+img { display: block; max-width: 100%; }
+
+/* ---- Background ---- */
+.bg-wrapper {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+}
+
+.bg-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.bg-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+}
+
+/* ---- Botón volver ---- */
+.btn-back {
+  display: inline-block;
+  margin: 24px 0 0 24px;
+  font-family: 'LDSlender', monospace;
+  font-size: 0.9rem;
+  letter-spacing: 0.1em;
+  color: #aaaaaa;
+  transition: color 0.2s, transform 0.2s;
+}
+
+.btn-back:hover {
+  color: #ffffff;
+  transform: translateX(-3px);
+}
+
+/* =============================================
+   MAIN
+   ============================================= */
+.main-content {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 20px 16px 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  align-items: center;
+}
+
+/* =============================================
+   TÍTULO PRINCIPAL
+   ============================================= */
+.game-header {
+  text-align: center;
+  padding: 20px 0 10px;
+}
+
+.game-title {
+  font-family: 'Eordeoghlakat', sans-serif;
+  font-size: clamp(2.8rem, 10vw, 4.5rem);
+  font-weight: normal;
+  color: #ffffff;
+  letter-spacing: 0.04em;
+  line-height: 1;
+}
+
+.roman {
+  color: #c0392b;
+  font-style: italic;
+}
+
+.game-subtitle {
+  font-family: 'LDSlender', monospace;
+  font-size: clamp(0.85rem, 3vw, 1.1rem);
+  letter-spacing: 0.25em;
+  color: #aaaaaa;
+  margin-top: 8px;
+  text-transform: uppercase;
+}
+
+/* =============================================
+   CARDS
+   ============================================= */
+.info-card {
+  background: rgba(0, 0, 0, 0.82);
+  border-radius: 6px;
+  padding: 26px 22px;
+  width: 100%;
+}
+
+.card-title {
+  font-family: 'LDSlender', sans-serif;
+  font-size: clamp(1.4rem, 5vw, 1.9rem);
+  font-weight: normal;
+  text-align: center;
+  letter-spacing: 0.1em;
+  color: #ffffff;
+  margin-bottom: 18px;
+  text-transform: uppercase;
+}
+
+.card-text {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.card-text p {
+  font-family: 'LDSlender', sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #e8e8e8;
+}
+
+/* =============================================
+   CRÉDITOS
+   ============================================= */
+.credits-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.credit-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  padding-bottom: 12px;
+}
+
+.credit-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.credit-role {
+  font-family: 'LDSlender', monospace;
+  font-size: 0.85rem;
+  letter-spacing: 0.15em;
+  color: #aaaaaa;
+  text-transform: uppercase;
+}
+
+.credit-name {
+  font-family: 'Eordeoghlakat', sans-serif;
+  font-size: 1.2rem;
+  color: #ffffff;
+  letter-spacing: 0.05em;
+}

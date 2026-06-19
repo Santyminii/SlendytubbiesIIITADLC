@@ -1,0 +1,238 @@
+/* =============================================
+   SANTYMINII — style.css
+   ============================================= */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ---- Fuentes locales ---- */
+@font-face {
+  font-family: 'Eordeoghlakat';
+  src: url('Eordeoghlakat.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'LDSlender';
+  src: url('ldslender.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'LDSlender', sans-serif;
+  min-height: 100vh;
+  color: #ffffff;
+  position: relative;
+  overflow-x: hidden;
+}
+
+a { text-decoration: none; color: inherit; }
+img { display: block; max-width: 100%; }
+
+/* ---- Background ---- */
+.bg-wrapper {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+}
+
+.bg-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.bg-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+/* =============================================
+   HEADER
+   ============================================= */
+.site-header {
+  text-align: center;
+  padding: 40px 20px 24px;
+}
+
+.header-title {
+  font-family: 'Eordeoghlakat', sans-serif;
+  font-size: clamp(2.4rem, 10vw, 3.8rem);
+  font-weight: normal;
+  letter-spacing: 0.04em;
+  line-height: 1;
+  text-transform: uppercase;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 0.15em;
+  flex-wrap: wrap;
+}
+
+.header-santy    { color: #062085; }
+.header-minii    { color: #1c6700; }
+.header-presenta { color: #ffffff; margin-left: 0.3em; }
+
+.header-sub {
+  font-family: 'LDSlender', sans-serif;
+  font-size: 1.55rem;
+  color: #dddddd;
+  margin-top: 10px;
+  letter-spacing: 0.04em;
+}
+
+/* =============================================
+   MAIN
+   ============================================= */
+.main-content {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 0 16px 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  align-items: center;
+}
+
+/* =============================================
+   PROJECT CARD
+   ============================================= */
+.project-card {
+  background: rgba(0, 0, 0, 0.82);
+  border-radius: 6px;
+  padding: 50px 18px 18px;
+  width: 700px;
+  max-width: 600px;
+}
+
+.project-title {
+  font-family: 'Eordeoghlakat', sans-serif;
+  font-size: clamp(1.6rem, 6vw, 2.1rem);
+  font-weight: normal;
+  color: #ffffff;
+  text-align: center;
+  letter-spacing: 0.04em;
+}
+
+.roman {
+  color: #c0392b;
+  font-style: normal;
+}
+
+.project-subtitle {
+  font-family: 'LDSlender', monospace;
+  font-size: 0.85rem;
+  letter-spacing: 0.2em;
+  color: #aaaaaa;
+  text-align: center;
+  margin-top: 4px;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+
+.project-body {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+
+.project-img {
+  flex: 1;
+  border-radius: 4px;
+  object-fit: cover;
+  max-height: 220px;
+  width: 100%;
+}
+
+.project-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+/* Buttons */
+.btn {
+  display: block;
+  text-align: center;
+  padding: 10px 16px;
+  border-radius: 4px;
+  font-family: 'LDSlender', monospace;
+  font-size: 0.9rem;
+  font-weight: normal;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  transition: filter 0.15s, transform 0.15s;
+  min-width: 90px;
+}
+
+.btn:hover {
+  filter: brightness(1.2);
+  transform: translateY(-1px);
+}
+
+.btn-gamejolt {
+  background: #27ae60;
+  color: #ffffff;
+}
+
+.btn-info {
+  background: #1a6bb5;
+  color: #ffffff;
+}
+
+/* =============================================
+   ABOUT CARD
+   ============================================= */
+.about-card {
+  background: rgba(0, 0, 0, 0.82);
+  border-radius: 6px;
+  padding: 22px 18px 24px;
+  width: 480px;
+  max-width: 95vw;
+}
+
+.about-title {
+  font-family: 'LDSlender', sans-serif;
+  font-size: clamp(1.8rem, 7vw, 2.4rem);
+  font-weight: normal;
+  text-align: center;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+
+.about-text {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.about-text p {
+  font-family: 'LDSlender', sans-serif;
+  font-size: 1.5rem;
+  line-height: 1.65;
+  color: #e8e8e8;
+}
+
+/* =============================================
+   RESPONSIVE
+   ============================================= */
+@media (max-width: 400px) {
+  .project-body {
+    flex-direction: column;
+  }
+  .project-buttons {
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+  }
+}
