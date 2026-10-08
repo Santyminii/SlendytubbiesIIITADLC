@@ -7,7 +7,7 @@
       "priority": 10,
       "start": "10-01",
       "end": "11-01",
-      "message": "<color=gray>Happy</color><color=orange> Halloween</color>, {USER}!"
+      "message": "<color=grey>Happy</color><color=orange> Halloween</color>, {USER}!"
     },
     {
       "id": "christmas",
@@ -23,7 +23,7 @@
       "priority": 20,
       "start": "",
       "end": "",
-      "message": "<color=gray>Happy new year</color>, {USER}!"
+      "message": "<color=grey>Happy new year</color>, {USER}!"
     }
   ]
 }
